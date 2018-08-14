@@ -7,15 +7,6 @@
  jQuery(document).ready(function($) {
 
 /*----------------------------------------------------*/
-/* FitText Settings
------------------------------------------------------- */
-
-    setTimeout(function() {
-	   $('h1.responsive-headline').fitText(1, { minFontSize: '40px', maxFontSize: '90px' });
-	 }, 100);
-
-
-/*----------------------------------------------------*/
 /* Smooth Scrolling
 ------------------------------------------------------ */
 
@@ -116,22 +107,6 @@
     		e.preventDefault();
     		$.magnificPopup.close();
     });
-
-
-/*----------------------------------------------------*/
-/*	Flexslider
-/*----------------------------------------------------*/
-   $('.flexslider').flexslider({
-      namespace: "flex-",
-      controlsContainer: ".flex-container",
-      animation: 'slide',
-      controlNav: true,
-      directionNav: false,
-      smoothHeight: true,
-      slideshowSpeed: 7000,
-      animationSpeed: 600,
-      randomize: false,
-   });
 
 /*----------------------------------------------------*/
 /*	contact form
