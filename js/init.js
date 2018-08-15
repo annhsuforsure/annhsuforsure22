@@ -162,8 +162,8 @@
   $('#tw').click(function(event) {
     var url = window.location.href;
     var newurl = url.split("#")[0].split("?")[0] + '?lng=tw' + (url.match("#") ? '#' + url.split("#")[1] : '');
-    if(getUrlVars()["lng"]){
-      if((getUrlVars()["lng"] == 'en')){
+    if(getUrlVars()){
+      if((getUrlVars() == 'en')){
         window.location.href = window.location.href.replace('en', 'tw');
       }
     }else{
@@ -173,8 +173,8 @@
   $('#en').click(function(event) {
     var url = window.location.href;
     var newurl = url.split("#")[0].split("?")[0] + '?lng=en' + (url.match("#") ? '#' + url.split("#")[1] : '');
-    if(getUrlVars()["lng"]){
-      if((getUrlVars()["lng"] == 'tw')){
+    if(getUrlVars()){
+      if((getUrlVars() == 'tw')){
         window.location.href = window.location.href.replace('tw', 'en');
       }
     }else{
@@ -199,3 +199,16 @@
   });
 
 });
+
+function getUrlVars() {
+  var vars = [],
+    hash;
+  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+  for (var i = 0; i < hashes.length; i++) {
+    hash = hashes[i].split('=');
+    vars.push(hash[0]);
+    vars[hash[0]] = hash[1];
+  }
+  vars = vars.lng ? (vars.lng.match("#") ? vars.lng.split("#")[0] : vars.lng) : "";
+  return vars;
+}
