@@ -162,24 +162,12 @@
   $('#tw').click(function(event) {
     var url = window.location.href;
     var newurl = url.split("#")[0].split("?")[0] + '?lng=tw' + (url.match("#") ? '#' + url.split("#")[1] : '');
-    if(getUrlVars()){
-      if((getUrlVars() == 'en')){
-        window.location.href = window.location.href.replace('en', 'tw');
-      }
-    }else{
-      window.location.href = newurl;
-    }
+    window.location.href = newurl;
   });
   $('#en').click(function(event) {
     var url = window.location.href;
     var newurl = url.split("#")[0].split("?")[0] + '?lng=en' + (url.match("#") ? '#' + url.split("#")[1] : '');
-    if(getUrlVars()){
-      if((getUrlVars() == 'tw')){
-        window.location.href = window.location.href.replace('tw', 'en');
-      }
-    }else{
-      window.location.href = newurl;
-    }
+    window.location.href = newurl;
   });
   $('.dropdown-item').click(function() {
       $('#dropdownMenu').parent().removeClass("show");
