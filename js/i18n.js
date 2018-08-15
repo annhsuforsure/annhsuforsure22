@@ -6,7 +6,7 @@ var tw = {
 			"resume": "履歷",
 			"lifestyle": "其他",
 		},
-		"headline": "一個熱愛市場分析的 <span>前端工程師</span>, <span>企劃執行</span>，期望以市場面向切入網頁/程式開發，打造更美好的產品。",
+		"headline": "一個熱愛市場分析的 <span>前端工程師</span>、<span>企劃執行</span>，期望以市場面向切入網頁/程式開發，打造更美好的產品。",
 		"headline2": "<span>Keep learning, keep going!</span>",
 		"aboutme": "關於我",
 		"aboutme2": "大學四年主修企業管理，畢業後擔任行銷企劃三年。熟悉品牌行銷、消費者行為及市場特性，進入的職場第四年，開始自學程式語言。轉職工程師後，擅長透過敏銳觀察及清晰邏輯解決問題，現任公司主產品前端網頁負責人。不斷學習新領域，並且樂在其中。",
@@ -49,6 +49,8 @@ var tw = {
 			"tw": "繁體中文",
 			"en": "English",
 		},
+		"comfirm": "確認",
+		"close": "關閉",
 	},
 },
 en = {
@@ -102,6 +104,8 @@ en = {
 			"tw": "繁體中文",
 			"en": "English",
 		},
+		"comfirm": "Comfirm",
+		"close": "Close",
 	},
 };
 var allElements = document.getElementsByTagName("*");
