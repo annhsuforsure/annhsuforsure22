@@ -44,11 +44,16 @@
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
          <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-            <li><a class="smoothscroll" href="#resume">Resume</a></li>
-            <li><a class="smoothscroll" href="#portfolio">Lifestyle</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            <li class="current"><a class="smoothscroll" href="#home" data-i18n="app.nav.home">Home</a></li>
+            <li><a class="smoothscroll" href="#about" data-i18n="app.nav.about">About</a></li>
+            <li><a class="smoothscroll" href="#resume" data-i18n="app.nav.resume">Resume</a></li>
+            <li><a class="smoothscroll" href="#portfolio" data-i18n="app.nav.lifestyle">Lifestyle</a></li>
+            <li><div id="dropdownMenu"><!-- 繁體中文 --></div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+              <div class="dropdown-item" type="button" id="tw" data-i18n="app.language.tw">繁體中文</div>
+              <div class="dropdown-item" type="button" id="en" data-i18n="app.language.en">English</div>
+            </div>
+            <li>
          </ul> <!-- end #nav -->
 
       </nav> <!-- end #nav-wrap -->
@@ -56,8 +61,8 @@
       <div class="row banner">
          <div class="banner-text">
             <h1 class="responsive-headline">I'm Ann Hsu.</h1>
-            <h3>I'm a <span>Front-end Engineer</span>, <span>Marketing Executive</span> and looking forward to making product that brings brilliant experience for users.</h3>
-            <h3><span>Keep learning, keep going!</span></h3>
+            <h3 data-i18n="app.headline">I'm a <span>Front-end Engineer</span>, <span>Marketing Executive</span> and looking forward to making product that brings brilliant experience for users.</h3>
+            <h3 data-i18n="app.headline2"><span>Keep learning, keep going!</span></h3>
          </div>
       </div>
 
@@ -82,17 +87,17 @@
 
          <div class="nine columns main-col">
 
-            <h2>About Me</h2>
+            <h2 data-i18n="app.aboutme">About Me</h2>
 
-            <p>I majored in Business Administration for Bachelor's Degree, and had been doing marketing for over 3 years. I excel in Branding Strategy, Consumer Behavior and Market Analysis. After working in the marketing industry for 3 year, I started to learn programming on my own. I became a Front-end engineer, have been developing and aintaining main product of company. My philosophy is to keep learning new things and ENJOY it.
+            <p data-i18n="app.aboutme2">I majored in Business Administration for Bachelor's Degree, and had been doing marketing for over 3 years. I excel in Branding Strategy, Consumer Behavior and Market Analysis. After working in the marketing industry for 3 year, I started to learn programming on my own. I became a Front-end engineer, have been developing and aintaining main product of company. My philosophy is to keep learning new things and ENJOY it.
             </p>
 
             <div class="row">
 
                <div class="columns contact-details">
 
-                  <h2>Contact Details</h2>
-                  <p class="address">
+                  <h2 data-i18n="app.contactdetails">Contact Details</h2>
+                  <p class="address" data-i18n="app.contactdetails2">
 						   <span>CHIA-AN, HSU</span><br>
 						   <span>Cianjien District, Kaohsiung City</span><br>
 						   <span>(+886)910-333-553</span><br>
@@ -103,7 +108,9 @@
 
                <div class="columns download">
                   <p>
-                     <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
+                  <a href="#" class="button" id="download"><i class="fa fa-download"></i><span data-i18n="app.download">Download Resume</span></a>
+                     <a href="mailto:annnnn0830@gmail.com" class="button" id="mail"><i class="fa fa-envelope-o"></i></a>
+                     <a href="tel:+886910333553" class="button" id="phone"><i class="fa fa-phone"></i></a>
                   </p>
                </div>
 
@@ -125,7 +132,7 @@
       <div class="row education">
 
          <div class="three columns header-col">
-            <h1><span>Education</span></h1>
+            <h1><span data-i18n="app.education.title">Education</span></h1>
          </div>
 
          <div class="nine columns main-col">
@@ -134,8 +141,8 @@
 
                <div class="twelve columns">
 
-                  <h3>Fu Jen Catholic University</h3>
-                  <p class="info">Bachelor's Degree in Business Administration <span>&bull;</span> <em class="date">September 2008 - June 2012</em></p>
+                  <h3 data-i18n="app.education.content1">Fu Jen Catholic University</h3>
+                  <p class="info" data-i18n="app.education.content2">Bachelor's Degree in Business Administration <span>&bull;</span> <em class="date">September 2008 - June 2012</em></p>
 
                </div>
 
@@ -151,7 +158,7 @@
       <div class="row work">
 
          <div class="three columns header-col">
-            <h1><span>Work</span></h1>
+            <h1><span data-i18n="app.work.title">Work</span></h1>
          </div>
 
          <div class="nine columns main-col">
@@ -160,20 +167,20 @@
 
                <div class="twelve columns">
 
-                  <h3>Central Trillion Incorporation</h3>
-                  <p class="info">Front-End Engineer <span>&bull;</span> <em class="date">January 2016 - August 2018</em></p>
+                  <h3 data-i18n="app.work.content1">Central Trillion Incorporation</h3>
+                  <p class="info" data-i18n="app.work.content2">Front-End Engineer <span>&bull;</span> <em class="date">January 2016 - August 2018</em></p>
 
-                  <h5>WorkLink - Management System</h5>
+                  <h5 data-i18n="app.work.1">WorkLink - Management System</h5>
                   <p><img width="100%" class="pull-left" src="images/devices.png">
-                  I have been participating in company's main product - WorkLink. My job includes maintaining and developing new features with React.js and flux. I use git and postman to be more efficient while working. Also I have basic knowledge of RESTful api、RWD、AJAX. </p>
+                  <span data-i18n="app.work.2">I have been participating in company's main product - WorkLink. My job includes maintaining and developing new features with React.js and flux. I use git and postman to be more efficient while working. Also I have basic knowledge of RESTful api、RWD、AJAX. </span></p>
 
-                  <h5>WorkLink - User System</h5>
+                  <h5 data-i18n="app.work.3">WorkLink - User System</h5>
                   <p><img width="50%" class="pull-right" src="images/chat.png">
-                  I maintain and develop new features with React.js and flux, build real time front-end using Socket.io. I coordinate with back-end, iOS and Android developers in order to develop synchronously. Also I collaborate with designers to improve usability. </p>
+                  <span data-i18n="app.work.4">I maintain and develop new features with React.js and flux, build real time front-end using Socket.io. I coordinate with back-end, iOS and Android developers in order to develop synchronously. Also I collaborate with designers to improve usability. </span></p>
 
-                  <h5>Internal System</h5>
+                  <h5 data-i18n="app.work.5">Internal System</h5>
                   <p><img width="100%" class="pull-left" src="images/internals.png">
-                  I build Internal System with React.js and Redux so that our sales and accounting could create orders and invoicing online, manage contracts and clients. Also, the system provide that supervisor could export report to view performance and plan new strategy. </p>
+                  <span data-i18n="app.work.6">I build Internal System with React.js and Redux so that our sales and accounting could create orders and invoicing online, manage contracts and clients. Also, the system provide that supervisor could export report to view performance and plan new strategy. </span></p>
 
                </div>
 
@@ -183,13 +190,12 @@
 
                <div class="twelve columns">
 
-                  <h3>Renoir Company Limited</h3>
-                  <p class="info">Marketing Executive <span>&bull;</span> <em class="date">July 2012 - October 2015</em></p>
+                  <h3 data-i18n="app.work.content3">Renoir Company Limited</h3>
+                  <p class="info" data-i18n="app.work.content4">Marketing Executive <span>&bull;</span> <em class="date">July 2012 - October 2015</em></p>
 
                   <p><img width="150" height="150" class="pull-left" src="images/shop.png">
                   <img width="150" height="150" class="pull-left" src="images/app.png">
-                  I was responsible for event planning and executions. I communicated with authorized agents to make sure that products are approved and produced in schedule. Also, I was a part of the Costco roadshow project, doing manufacturing process improvement and official app development.
-                  </p>
+                  <span data-i18n="app.work.7">I was responsible for event planning and executions. I communicated with authorized agents to make sure that products are approved and produced in schedule. Also, I was a part of the Costco roadshow project, doing manufacturing process improvement and official app development. </span></p>
 
                </div>
 
@@ -205,23 +211,23 @@
       <div class="row skill">
 
          <div class="three columns header-col">
-            <h1><span>Skills</span></h1>
+            <h1><span data-i18n="app.skill.title">Skills</span></h1>
          </div>
 
          <div class="nine columns main-col">
 
             <dl>
 
-               <dt><b>Technical Skill</b></dt>
-                  <dd><b>HTML / CSS / Javascript / react / flux / redux / </b></dd>
-                  <dd><b>PHP / git / webpack / gulp / Zeplin / </b></dd>
-                  <dd><b>Photoshop / Illustrator </b></dd>
-               <dt><b>Language Skill</b></dt>
-                  <dd><b>English: fluent / Mandarin: native speaker / </b></dd>
-                  <dd><b>Taiwanese: native speaker</b></dd>
-               <dt><b>Interpersonal Skill</b></dt>
-                  <dd><b>Clear expression / Good communication / </b></dd>
-                  <dd><b>Effective negotiation</b></dd>
+               <dt><b data-i18n="app.skill.title1">Technical Skill</b></dt>
+                  <dd><b data-i18n="app.skill.1">HTML / CSS / Javascript / react / flux / redux / </b></dd>
+                  <dd><b data-i18n="app.skill.2">PHP / git / webpack / gulp / Zeplin / </b></dd>
+                  <dd><b data-i18n="app.skill.3">Photoshop / Illustrator </b></dd>
+               <dt><b data-i18n="app.skill.title2">Language Skill</b></dt>
+                  <dd><b data-i18n="app.skill.4">English: fluent / Mandarin: native speaker / </b></dd>
+                  <dd><b data-i18n="app.skill.5">Taiwanese: native speaker</b></dd>
+               <dt><b data-i18n="app.skill.title3">Interpersonal Skill</b></dt>
+                  <dd><b data-i18n="app.skill.6">Clear expression / Good communication / </b></dd>
+                  <dd><b data-i18n="app.skill.7">Effective negotiation</b></dd>
 
             </dl>
 
@@ -679,42 +685,6 @@
    </section> <!-- Portfolio Section End-->
 
 
-   <!-- Contact Section
-   ================================================== -->
-   <section id="contact">
-
-         <div class="row section-head">
-
-            <div class="two columns header-col">
-
-               <h1><span>Get In Touch.</span></h1>
-
-            </div>
-
-            <div class="four columns footer-widgets">
-
-               <div class="widget widget_contact">
-
-                  <h4>Email and Phone</h4>
-                  <p class="address">
-                     徐佳安 Ann Hsu<br>
-                     annnnn0830@gmail.com <br>
-                     <span>(+886) 910-333-553</span>
-                  </p>
-
-               </div>
-
-            </div>
-            <div class="six columns">
-               <a href="mailto:annnnn0830@gmail.com" class="button" id="mail"><i class="fa fa-envelope-o" style="color: #fff"></i></a>
-               <a href="tel:+886910333553" class="button" id="phone"><i class="fa fa-phone" style="color: #fff"></i></a>
-            </div>
-
-         </div>
-
-   </section> <!-- Contact Section End-->
-
-
    <!-- footer
    ================================================== -->
    <footer>
@@ -737,8 +707,8 @@
 
    <!-- Java Script
    ================================================== -->
-   <script src="js/jquery-1.10.2.min.js"><\/script>
-   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script type="text/javascript" src="js/i18n.js"></script>
    <script src="js/waypoints.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>

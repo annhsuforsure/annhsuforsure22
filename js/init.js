@@ -151,13 +151,51 @@
       return false;
    });
 
+/*----------------------------------------------------*/
+/*  dropdown
+------------------------------------------------------*/
+
+  $('#dropdownMenu').click(function() {
+      $(this).parent()[0].className ? $(this).parent().removeClass("show") : $(this).parent().addClass("show");
+   });
+
+  $('#tw').click(function(event) {
+    var url = window.location.href;
+    var newurl = url.split("#")[0].split("?")[0] + '?lng=tw' + (url.match("#") ? '#' + url.split("#")[1] : '');
+    if(getUrlVars()["lng"]){
+      if((getUrlVars()["lng"] == 'en')){
+        window.location.href = window.location.href.replace('en', 'tw');
+      }
+    }else{
+      window.location.href = newurl;
+    }
+  });
+  $('#en').click(function(event) {
+    var url = window.location.href;
+    var newurl = url.split("#")[0].split("?")[0] + '?lng=en' + (url.match("#") ? '#' + url.split("#")[1] : '');
+    if(getUrlVars()["lng"]){
+      if((getUrlVars()["lng"] == 'tw')){
+        window.location.href = window.location.href.replace('tw', 'en');
+      }
+    }else{
+      window.location.href = newurl;
+    }
+  });
+  $('.dropdown-item').click(function() {
+      $('#dropdownMenu').parent().removeClass("show");
+   });
+
+/*----------------------------------------------------*/
+/*  download
+------------------------------------------------------*/
+
+  $('#download').click(function() {
+    var link = document.createElement('a');
+    document.body.appendChild(link); // Firefox requires the link to be in the body
+    link.href = 'file/AnnHsu_Resume_' + getUrlVars() + '.pdf';
+    link.target = '_blank';
+    link.click();
+    document.body.removeChild(link); // remove the link when done
+  });
 
 });
-
-
-
-
-
-
-
-
