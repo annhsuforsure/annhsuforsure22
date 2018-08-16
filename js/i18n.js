@@ -106,12 +106,13 @@ var allElements = document.getElementsByTagName("*");
 var lindex = window.location.href.indexOf('?');
 var slng = lindex > -1 ? (window.location.href.slice(lindex+5, lindex+7) == "tw" ? "tw" : "en") : "tw";
 var lng = slng === "tw" ? tw : en;
+console.log('dropdown',$('#dropdownMenu')[0],$('#dropdownMenu'))
 for (var i = 0, n = allElements.length; i < n; i++){
+	console.log('all',allElements[i]);
 	if (allElements[i].getAttribute("data-i18n") !== null) {
 		allElements[i].innerHTML = getString(lng, allElements[i].getAttribute("data-i18n").split("."));
 	}
 }
-console.log('dropdown',$('#dropdownMenu')[0],$('#dropdownMenu'))
 $('#dropdownMenu')[0].className = "btn";
 function getString(init,arr) {
 	var str = init
