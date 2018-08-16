@@ -180,23 +180,12 @@
   $('#download').click(function() {
     var link = document.createElement('a');
     document.body.appendChild(link); // Firefox requires the link to be in the body
-    link.href = 'file/AnnHsu_Resume_' + getUrlVars() + '.pdf';
+    var index = window.location.href.indexOf('?');
+    var lng = index ? (window.location.href.slice(index+5, index+7) == "tw" ? "tw" : "en") : "tw";
+    link.href = 'file/AnnHsu_Resume_' + lng + '.pdf';
     link.target = '_blank';
     link.click();
     document.body.removeChild(link); // remove the link when done
   });
 
 });
-
-function getUrlVars() {
-  var vars = [],
-    hash;
-  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  for (var i = 0; i < hashes.length; i++) {
-    hash = hashes[i].split('=');
-    vars.push(hash[0]);
-    vars[hash[0]] = hash[1];
-  }
-  vars = vars.lng ? (vars.lng.match("#") ? vars.lng.split("#")[0] : vars.lng) : "";
-  return vars;
-}
