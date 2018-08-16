@@ -45,10 +45,7 @@ var tw = {
 			"6": "清楚表達能力 / 溝通能力 / 衝突協調能力",
 			"7": "",
 		},
-		"language": {
-			"tw": "繁體中文",
-			"en": "English",
-		},
+		"language": "繁體中文",
 		"comfirm": "確認",
 		"close": "關閉",
 	},
@@ -100,10 +97,7 @@ en = {
 			"6": "Clear expression / Good communication / ",
 			"7": "Effective negotiation",
 		},
-		"language": {
-			"tw": "繁體中文",
-			"en": "English",
-		},
+		"language": "English",
 		"comfirm": "Comfirm",
 		"close": "Close",
 	},
@@ -117,7 +111,6 @@ for (var i = 0, n = allElements.length; i < n; i++){
 		allElements[i].innerHTML = getString(lng, allElements[i].getAttribute("data-i18n").split("."));
 	}
 }
-$('#dropdownMenu')[0].innerHTML = lng.app.language[slng];
 $('#dropdownMenu')[0].className = "btn";
 function getString(init,arr) {
 	var str = init
