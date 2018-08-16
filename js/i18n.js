@@ -111,6 +111,7 @@ for (var i = 0, n = allElements.length; i < n; i++){
 		allElements[i].innerHTML = getString(lng, allElements[i].getAttribute("data-i18n").split("."));
 	}
 }
+console.log('$('#dropdownMenu')[0]',$('#dropdownMenu')[0],$('#dropdownMenu'))
 $('#dropdownMenu')[0].className = "btn";
 function getString(init,arr) {
 	var str = init
