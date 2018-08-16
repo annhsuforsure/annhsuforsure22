@@ -180,6 +180,7 @@
    }
 
    ul#nav li:nth-last-child(2) {
+      width: 26px;
       border-bottom: 0;
       margin: 12px 0;
    }

@@ -181,7 +181,7 @@
     var link = document.createElement('a');
     document.body.appendChild(link); // Firefox requires the link to be in the body
     var index = window.location.href.indexOf('?');
-    var lng = index ? (window.location.href.slice(index+5, index+7) == "tw" ? "tw" : "en") : "tw";
+    var lng = index > -1 ? (window.location.href.slice(index+5, index+7) == "tw" ? "tw" : "en") : "tw";
     link.href = 'file/AnnHsu_Resume_' + lng + '.pdf';
     link.target = '_blank';
     link.click();

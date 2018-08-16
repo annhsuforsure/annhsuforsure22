@@ -110,7 +110,7 @@ en = {
 };
 var allElements = document.getElementsByTagName("*");
 var lindex = window.location.href.indexOf('?');
-var slng = lindex ? (window.location.href.slice(lindex+5, lindex+7) == "tw" ? "tw" : "en") : "tw";
+var slng = lindex > -1 ? (window.location.href.slice(lindex+5, lindex+7) == "tw" ? "tw" : "en") : "tw";
 var lng = slng === "tw" ? tw : en;
 for (var i = 0, n = allElements.length; i < n; i++){
 	if (allElements[i].getAttribute("data-i18n") !== null) {
