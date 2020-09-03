@@ -11,7 +11,7 @@ var tw = {
 		"aboutme": "關於我",
 		"aboutme2": "大學四年主修企業管理，畢業後擔任行銷企劃三年。熟悉品牌行銷、消費者行為及市場特性，進入的職場第四年，開始自學程式語言。轉職工程師後，擅長透過敏銳觀察及清晰邏輯解決問題，擔任公司主產品前端網頁負責人。不斷學習新領域，並且樂在其中。",
 		"contactdetails": "聯絡資訊",
-		"contactdetails2": "<span>徐佳安</span><br><span>前鎮區, 高雄市</span><br><span>(+886)910-333-553</span><br><span>annnnn0830@gmail.com</span>",
+		"contactdetails2": "<span>徐佳安</span><br><span>前鎮區, 高雄市</span>",
 		"download": "下載履歷",
 		"education": {
 			"title": "教育程度",
@@ -63,7 +63,7 @@ en = {
 		"aboutme": "About Me",
 		"aboutme2": "I majored in Business Administration for Bachelor's Degree, and had been doing marketing for over 3 years. I excel in Branding Strategy, Consumer Behavior and Market Analysis. After working in the marketing industry for 3 year, I started to learn programming on my own. I became a Front-end engineer, have been developing and maintaining main product of company. My philosophy is to keep learning new things and ENJOY it.",
 		"contactdetails": "Contact Details",
-		"contactdetails2": "<span>CHIA-AN, HSU</span><br><span>Cianjien District, Kaohsiung City</span><br><span>(+886)910-333-553</span><br><span>annnnn0830@gmail.com</span>",
+		"contactdetails2": "<span>CHIA-AN, HSU</span><br><span>Cianjien District, Kaohsiung City</span>",
 		"download": "Download Resume",
 		"education": {
 			"title": "Education",
