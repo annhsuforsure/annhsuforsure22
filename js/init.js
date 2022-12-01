@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
         return '<div class="columns portfolio-item"><div class="item-wrap"><a href="#modal-' + i.id + '" title=""><img alt="" src="images/portfolio/' + i.id + '.jpg"><div class="overlay"><div class="portfolio-item-meta"><h5>' + i.title + '</h5><p>' + i.city + '</p></div></div><div class="link-icon"><i class="icon-plus"></i></div></a></div></div>';
     });
     var modalItem = portfolioList.map(function(i) {
-        return '<div id="modal-' + i.id + '" class="popup-modal mfp-hide"><img class="scale-with-grid" src="images/portfolio/modals/' + i.id + '.jpg" alt="" /><div class="description-box"><h4>' + i.title + '</h4><span class="categories"><i class="fa fa-tag"></i>' + i.name + ', ' + i.city + '</span></div><div class="link-box"><a class="popup-modal-dismiss" data-i18n="app.comfirm">Comfirm</a><a class="popup-modal-dismiss" data-i18n="app.close">Close</a></div></div>';
+        return '<div id="modal-' + i.id + '" class="popup-modal mfp-hide"><img class="scale-with-grid" src="images/portfolio/modals/' + i.id + '.jpg" alt="" /><div class="description-box"><h4>' + i.title + '</h4><span class="categories"><i class="fa fa-tag"></i>' + i.name + ', ' + i.city + '</span></div><div class="link-box"><a class="popup-modal-dismiss" data-i18n="app.close">Close</a></div></div>';
     });
     $('#portfolio-wrapper').append(portfolioItem);
     $('#portfolio-list').append(modalItem);
@@ -188,33 +188,12 @@ jQuery(document).ready(function($) {
         $(this).parent()[0].className ? $(this).parent().removeClass("show") : $(this).parent().addClass("show");
     });
 
-    $('#tw').click(function(event) {
+    $('#tw, #en').click(function(event) {
         var url = window.location.href;
-        var newurl = url.split("#")[0].split("?")[0] + '?lng=tw' + (url.match("#") ? '#' + url.split("#")[1] : '');
-        window.location.href = newurl;
-    });
-    $('#en').click(function(event) {
-        var url = window.location.href;
-        var newurl = url.split("#")[0].split("?")[0] + '?lng=en' + (url.match("#") ? '#' + url.split("#")[1] : '');
-        window.location.href = newurl;
+        window.location.href = `${url.split("#")[0].split("?")[0]}?lng=${event.target.id}`;
     });
     $('.dropdown-item').click(function() {
         $('#dropdownMenu').parent().removeClass("show");
-    });
-
-    /*----------------------------------------------------*/
-    /*  download
-    ------------------------------------------------------*/
-
-    $('#download').click(function() {
-        var link = document.createElement('a');
-        document.body.appendChild(link); // Firefox requires the link to be in the body
-        var index = window.location.href.indexOf('?');
-        var lng = index > -1 ? (window.location.href.slice(index + 5, index + 7) == "tw" ? "tw" : "en") : "tw";
-        link.href = 'file/AnnHsu_Resume_' + lng + '.pdf';
-        link.target = '_blank';
-        link.click();
-        document.body.removeChild(link); // remove the link when done
     });
 
 });

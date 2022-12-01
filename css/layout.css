@@ -736,11 +736,7 @@ ul#nav li.current a {
 }
 
 .popup-modal a:hover {
-    color: #F06000;
-}
-
-.popup-modal a.popup-modal-dismiss {
-    margin-left: 24px;
+    color: #0F9095;
 }
 
 
@@ -1225,6 +1221,7 @@ footer .social-links li:first-child {
     border-color: #F06000;
     border-bottom: 0;
     border-radius: 4px 4px 0 0;
+    cursor: pointer;
 }
 
 .show>.btn:hover {
@@ -1234,11 +1231,15 @@ footer .social-links li:first-child {
 
 .show>.dropdown-menu {
     display: block;
+    cursor: pointer;
 }
 
 .dropdown-item:hover {
     color: #F06000;
     background-color: rgb(255, 255, 255, 0.5);
+}
+
+.dropdownBtn {
     cursor: pointer;
 }
 

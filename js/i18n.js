@@ -65,7 +65,7 @@ var tw = {
                 "resume": "resume",
                 "lifestyle": "lifestyle",
             },
-            "headline": "I'm a <span>Front-end Engineer</span>, <span>Marketing Executive</span> and looking forward to making product that brings brilliant experience for users.",
+            "headline": "I'm a <span>Front-end Engineer</span> and looking forward to making product that brings brilliant experience for users.",
             "headline2": "<span>Keep learning, keep going!</span>",
             "aboutme": "About Me",
             "aboutme2": "I majored in Business Administration for Bachelor's Degree, and had been doing marketing for over 3 years. I excel in Branding Strategy, Consumer Behavior and Market Analysis. <br>2015, I started to learn programming on my own, and became a Front-end engineer. I have been developing and maintaining main product of company. <br>My philosophy is to keep learning new things and ENJOY it.",
@@ -125,7 +125,7 @@ for (var i = 0, n = allElements.length; i < n; i++) {
         allElements[i].innerHTML = getString(lng, allElements[i].getAttribute("data-i18n").split("."));
     }
 }
-document.getElementById("dropdownMenu").className = "btn";
+document.getElementById("dropdownMenu").className = "btn dropdownBtn";
 
 function getString(init, arr) {
     var str = init
